@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Frontend Mentor | News homepage</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+
+    
+  </style>
+</head>
+<body>
+
+  <div id="container">
+    <header>
+      <a href="#"><img src="assets/images/logo.svg" id="logo" alt="Logo"></a>
+      <nav>
+          <div><a href="#">Home</a></div>
+          <div><a href="#">New</a></div>
+          <div><a href="#">Popular</a></div>
+          <div><a href="#">Trending</a></div>
+          <div><a href="#">Categories</a></div>
+      </nav>
+
+      <a href="javascript:void(0);" class="icon" id="hamburger" onclick="hamburger()">
+          <img src="assets/images/icon-menu.svg" alt="Hamburger icon">
+      </a>
+
+      <a href="javascript:void(0);" class="icon" id="close" onclick="closeButton()">
+          <img src="assets/images/icon-menu-close.svg" alt="Close menu icon">
+      </a>
+    </header>
+
+
+    <main>
+      
+        <img src="assets/images/image-web-3-mobile.jpg" id="image-web3-mobile" alt="Web 3.0 picture">
+     
+        <img src="assets/images/image-web-3-desktop.jpg" id="image-web3-desktop" alt="Web 3.0 picture">
+
+      <div id="wrapper">
+        <h1> The Bright Future of Web 3.0?</h1>
+
+        <div id="nested-wrapper">
+        <p>
+          We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+          But is it really fulfilling its promise?
+        </p>
+          
+        <button>Read more</button>
+       </div>
+    </div>
+
+    </main>
+
+    <aside id="latestnews">
+        <h2>New</h2>
+
+        <section id="latestnew1">
+          <h3>Hydrogen VS Electric Cars</h3>
+          <p> Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </section>
+
+        <hr>
+
+        <section id="latestnew2"> 
+          <h3>The Downsides of AI Artistry</h3>
+          <p>What are the possible adverse effects of on-demand AI image generation?</p>
+        </section>
+
+        <hr>
+
+        <section id="latestnew3">
+          <h3>Is VC Funding Drying Up?</h3>
+          <p>Private funding by VC firms is down 50% YOY. We take a look at what that means.</p>
+        </section>
+
+    </aside>
+
+    <section id="oldnews">
+
+       <article id="oldnews1">
+            <img src="assets/images/image-retro-pcs.jpg" alt="Retro PCs">
+            <div>
+              <span>01</span>
+              <h4> Reviving Retro PCs</h4>
+              <p>  What happens when old PCs are given modern upgrades?</p>
+            </div>
+          </article>   
+
+          <article id="oldnews2">
+            <img src="assets/images/image-top-laptops.jpg" alt="Top 10 Laptops">
+            <div>
+              <span>02</span>
+              <h4>Top 10 Laptops of 2022</h4>
+              <p>Our best picks for various needs and budgets.</p>
+            </div>
+          </article>
+
+          <article id="oldnews3">
+            <img src="assets/images/image-gaming-growth.jpg" alt="Gamepad">
+            <div>
+              <span>03</span>
+              <h4>The Growth of Gaming</h4>
+              <p>How the pandemic has sparked fresh opportunities.</p>
+            </div>
+          </article>
+
+    </section>
+    
+  <footer>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Idris Adeniyi</a>.
+  </div>
+  </footer>
+
+  </div>
+
+
+  <script type="text/javascript">
+    function hamburger(){
+      const nav = document.querySelector("nav");
+      
+      if (nav.style.display === "block") {
+        nav.style.display = "none";
+      }else{
+        nav.style.display = "block"
+      }
+
+       const hamburger = document.querySelector("#hamburger");
+       const closeBtn = document.querySelector("#close");
+       hamburger.style.display = "none";
+       closeBtn.style.display = "block";
+     
+    }
+
+
+    function closeButton(){
+
+      const nav = document.querySelector("nav");
+      const hamburger = document.querySelector("#hamburger");
+      const closeBtn = document.querySelector("#close");
+      nav.style.display = "none";
+      closeBtn.style.display = "none";
+      hamburger.style.display = "block";
+      }
+
+  </script>
+</body>
+</html>
